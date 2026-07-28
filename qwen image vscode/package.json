@@ -1,0 +1,104 @@
+{
+  "name": "qwen-image-local",
+  "displayName": "Qwen-Image Local Runner",
+  "description": "Install, manage, and run Qwen-Image (open-source image generation model) locally via ComfyUI, entirely from VS Code.",
+  "version": "0.10.1",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other", "Machine Learning"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "qwenImage.checkPrerequisites",
+        "title": "Qwen-Image: Check System Requirements"
+      },
+      {
+        "command": "qwenImage.installComfyUI",
+        "title": "Qwen-Image: 1. Install ComfyUI"
+      },
+      {
+        "command": "qwenImage.installGGUFNodes",
+        "title": "Qwen-Image: Fix/Reinstall GGUF Custom Nodes"
+      },
+      {
+        "command": "qwenImage.downloadModels",
+        "title": "Qwen-Image: 2. Download Model Files"
+      },
+      {
+        "command": "qwenImage.launchServer",
+        "title": "Qwen-Image: 3. Start Server"
+      },
+      {
+        "command": "qwenImage.stopServer",
+        "title": "Qwen-Image: Stop Server"
+      },
+      {
+        "command": "qwenImage.generateImage",
+        "title": "Qwen-Image: Generate Image"
+      },
+      {
+        "command": "qwenImage.setupAll",
+        "title": "Qwen-Image: Run Full Setup (Install + Download + Launch)"
+      }
+    ],
+    "configuration": {
+      "title": "Qwen-Image Local Runner",
+      "properties": {
+        "qwenImage.installDir": {
+          "type": "string",
+          "default": "",
+          "description": "Folder where ComfyUI will be installed. Defaults to a folder in your home directory if left blank."
+        },
+        "qwenImage.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "Command used to invoke Python (e.g. 'python', 'python3', or a full path)."
+        },
+        "qwenImage.quantVariant": {
+          "type": "string",
+          "enum": ["Q2_K", "Q3_K_S", "Q4_K_M", "Q5_K_M", "FP8"],
+          "default": "Q4_K_M",
+          "description": "Which quantization to download. Lower = smaller/faster but lower quality. Q2_K/Q3_K_S for 8GB VRAM, Q4_K_M for 12GB+, FP8 for 16GB+."
+        },
+        "qwenImage.hfRepoGGUF": {
+          "type": "string",
+          "default": "unsloth/Qwen-Image-GGUF",
+          "description": "Hugging Face repo id for the GGUF quantized checkpoint. Change this if the model has moved or you prefer a different maintainer's build."
+        },
+        "qwenImage.hfRepoTextEncoder": {
+          "type": "string",
+          "default": "unsloth/Qwen2.5-VL-7B-Instruct-GGUF",
+          "description": "Hugging Face repo id containing the text encoder + mmproj files."
+        },
+        "qwenImage.hfRepoVAE": {
+          "type": "string",
+          "default": "Comfy-Org/Qwen-Image_ComfyUI",
+          "description": "Hugging Face repo id containing the VAE file (must be the ComfyUI-format VAE, matching the UNet's architecture)."
+        },
+        "qwenImage.serverHost": {
+          "type": "string",
+          "default": "127.0.0.1",
+          "description": "Host ComfyUI binds to."
+        },
+        "qwenImage.serverPort": {
+          "type": "number",
+          "default": 8188,
+          "description": "Port ComfyUI binds to."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}
