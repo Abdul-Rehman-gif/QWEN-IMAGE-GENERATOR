@@ -1,7 +1,7 @@
 <div align="center">
   <img src="qwen image vscode/images/banner.png" alt="Qwen-Image Local Runner" width="100%">
 
-  # 🎨 Qwen-Image Local Runner
+  #  Qwen-Image Local Runner
 
   **Generate AI images locally, straight from VS Code — no cloud API, no manual terminal juggling.**
 
@@ -18,18 +18,18 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🧩 **One-click setup** — clones ComfyUI, installs its Python dependencies, installs the GGUF custom node pack, and downloads all model files automatically
-- 🖥️ **Cross-vendor GPU detection** — recognizes NVIDIA, AMD, Intel, and Apple Silicon, and tunes its recommendations (and launch flags) accordingly
-- 🐌➡️⚡ **Automatic CPU fallback** — if there's no NVIDIA GPU, the server launches in `--cpu` mode automatically, no flags to remember
-- 📶 **Resilient downloads** — resumes from where it left off after a dropped connection instead of restarting multi-GB files from zero, and verifies every file is fully intact before accepting it
-- 💬 **Prompt-to-image, no node graph required** — type a prompt in a VS Code input box; the extension builds and submits the ComfyUI workflow for you
-- 🔧 **Self-healing commands** — dedicated commands to fix custom nodes or restart the server without redoing the whole install
+-  **One-click setup** — clones ComfyUI, installs its Python dependencies, installs the GGUF custom node pack, and downloads all model files automatically
+-  **Cross-vendor GPU detection** — recognizes NVIDIA, AMD, Intel, and Apple Silicon, and tunes its recommendations (and launch flags) accordingly
+-  **Automatic CPU fallback** — if there's no NVIDIA GPU, the server launches in `--cpu` mode automatically, no flags to remember
+-  **Resilient downloads** — resumes from where it left off after a dropped connection instead of restarting multi-GB files from zero, and verifies every file is fully intact before accepting it
+-  **Prompt-to-image, no node graph required** — type a prompt in a VS Code input box; the extension builds and submits the ComfyUI workflow for you
+-  **Self-healing commands** — dedicated commands to fix custom nodes or restart the server without redoing the whole install
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 > The banner above is a stylized graphic, not a literal screenshot — real screenshots go here as the project gets used. In the meantime, here's the shape of the experience:
 
@@ -42,7 +42,7 @@ a red panda reading a book under a maple tree, watercolor style
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Not published to the Marketplace — install directly from the `.vsix` file:
 
@@ -54,7 +54,7 @@ Or in VS Code: `Ctrl+Shift+P` → **`Extensions: Install from VSIX...`** → sel
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 | Requirement | Notes |
 |---|---|
@@ -63,7 +63,7 @@ Or in VS Code: `Ctrl+Shift+P` → **`Extensions: Install from VSIX...`** → sel
 | **Disk space** | ~15–20GB free, depending on which quantization you choose. |
 | **GPU (optional)** | NVIDIA with 8GB+ VRAM gives the best speed. AMD, Apple Silicon, and CPU-only all work, just slower — see below. |
 
-### 🖥 Hardware guidance
+###  Hardware guidance
 
 | Your hardware | What to expect | Recommended `quantVariant` |
 |---|---|---|
@@ -75,7 +75,7 @@ Or in VS Code: `Ctrl+Shift+P` → **`Extensions: Install from VSIX...`** → sel
 
 ---
 
-## 🛠 Usage
+## Usage
 
 Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and run, in order:
 
@@ -94,7 +94,7 @@ Or run the individual stages separately if you want more control:
 
 ---
 
-## ⚙️ Extension Settings
+##  Extension Settings
 
 Search **"Qwen Image"** in VS Code Settings (`Ctrl+,`):
 
@@ -110,7 +110,7 @@ Search **"Qwen Image"** in VS Code Settings (`Ctrl+,`):
 
 ---
 
-## 🩺 Troubleshooting
+##  Troubleshooting
 
 Real issues hit during development, and their fixes:
 
@@ -175,7 +175,7 @@ it may also be swapping to disk, which slows things further; lowering resolution
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 qwen-image-vscode
@@ -197,7 +197,7 @@ qwen-image-vscode
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Issues and improvements welcome — this started as a personal setup tool and grew from real debugging sessions,
 so PRs that harden the rough edges (better error messages, more GPU backends, workflow presets) are especially useful.
@@ -206,7 +206,7 @@ so PRs that harden the rough edges (better error messages, more GPU backends, wo
 
 MIT — see [LICENSE](LICENSE).
 
-## ❤️ Acknowledgements
+##  Acknowledgements
 
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) by comfyanonymous
 - [ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) by city96
