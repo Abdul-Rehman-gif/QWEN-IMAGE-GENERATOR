@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/banner.png" alt="Qwen-Image Local Runner" width="100%">
+  <img src="qwen image vscode/images/banner.png" alt="Qwen-Image Local Runner" width="100%">
 
   # 🎨 Qwen-Image Local Runner
 
